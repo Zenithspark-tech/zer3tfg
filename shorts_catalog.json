@@ -1,0 +1,342 @@
+{
+  "mediaSource": "Wikimedia Commons",
+  "note": "Curated real-life short-form videos. All entries are remote URLs; no media files are bundled. Each source includes audio/video and is presented with attribution/license metadata.",
+  "shorts": [
+    {
+      "slug": "city-real-life-01",
+      "title": "City Life in Motion",
+      "description": "Real street and city footage with ambient audio.",
+      "category": "TRAVEL",
+      "tags": [
+        "city",
+        "travel",
+        "street",
+        "real life"
+      ],
+      "duration": 28,
+      "sourceFile": "City.webm",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:City.webm",
+      "sourceCreator": "Ejog27",
+      "license": "CC BY-SA 4.0",
+      "audio": true,
+      "creatorIndex": 0,
+      "id": "starter-short-01",
+      "streamUrl": "/api/short-video/starter-short-01"
+    },
+    {
+      "slug": "football-street-02",
+      "title": "Street Football",
+      "description": "Real-life football footage from Sudan, with the original audio track.",
+      "category": "SPORTS",
+      "tags": [
+        "football",
+        "soccer",
+        "sports",
+        "street"
+      ],
+      "duration": 38,
+      "sourceFile": "This is soccer.webm",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:This_is_soccer.webm",
+      "sourceCreator": "Evworo",
+      "license": "CC BY-SA 3.0",
+      "audio": true,
+      "creatorIndex": 1,
+      "id": "starter-short-02",
+      "streamUrl": "/api/short-video/starter-short-02"
+    },
+    {
+      "slug": "nigeria-world-football-03",
+      "title": "World Football Day in Nigeria",
+      "description": "Real football campaign footage from Nigeria.",
+      "category": "SPORTS",
+      "tags": [
+        "football",
+        "Nigeria",
+        "sports",
+        "Africa"
+      ],
+      "duration": 72,
+      "sourceFile": "VIDEO-2026-05-21-22-53-29.webm",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:VIDEO-2026-05-21-22-53-29.webm",
+      "sourceCreator": "Uncle Bash007",
+      "license": "CC0 1.0",
+      "audio": true,
+      "creatorIndex": 2,
+      "id": "starter-short-03",
+      "streamUrl": "/api/short-video/starter-short-03"
+    },
+    {
+      "slug": "gbaygi-culture-04",
+      "title": "Northern Nigeria Cultural Dance",
+      "description": "Real cultural fashion and dance footage recorded in Nigeria.",
+      "category": "CULTURE",
+      "tags": [
+        "culture",
+        "Nigeria",
+        "dance",
+        "fashion"
+      ],
+      "duration": 40,
+      "sourceFile": "Gbaygi cultural dance.webm",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Gbaygi_cultural_dance.webm",
+      "sourceCreator": "Ebiojo",
+      "license": "CC BY-SA 4.0",
+      "audio": true,
+      "creatorIndex": 3,
+      "id": "starter-short-04",
+      "streamUrl": "/api/short-video/starter-short-04"
+    },
+    {
+      "slug": "dagbomba-dance-05",
+      "title": "Dagbomba Cultural Dance",
+      "description": "Real vertical dance footage with the original audio track.",
+      "category": "DANCE",
+      "tags": [
+        "dance",
+        "culture",
+        "Ghana",
+        "music"
+      ],
+      "duration": 40,
+      "sourceFile": "A woman on dancing floor.webm",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:A_woman_on_dancing_floor.webm",
+      "sourceCreator": "Munkaila Sulemana",
+      "license": "CC BY-SA 4.0",
+      "audio": true,
+      "creatorIndex": 4,
+      "id": "starter-short-05",
+      "streamUrl": "/api/short-video/starter-short-05"
+    },
+    {
+      "slug": "teamwork-real-life-06",
+      "title": "Real-Life Teamwork",
+      "description": "A real-world teamwork moment captured from a hostel window.",
+      "category": "PEOPLE",
+      "tags": [
+        "people",
+        "teamwork",
+        "students",
+        "life"
+      ],
+      "duration": 20,
+      "sourceFile": "Example of team work.webm",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Example_of_team_work.webm",
+      "sourceCreator": "Hridoy Kundu",
+      "license": "CC BY-SA 4.0",
+      "audio": true,
+      "creatorIndex": 5,
+      "id": "starter-short-06",
+      "streamUrl": "/api/short-video/starter-short-06"
+    },
+    {
+      "slug": "robot-arm-07",
+      "title": "Robot Arm in Action",
+      "description": "A real robotic arm operating in a tape library.",
+      "category": "TECH",
+      "tags": [
+        "robotics",
+        "technology",
+        "engineering",
+        "AI"
+      ],
+      "duration": 30,
+      "sourceFile": "Lindirobot.webm",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Lindirobot.webm",
+      "sourceCreator": "MargoM",
+      "license": "CC BY-SA 4.0",
+      "audio": true,
+      "creatorIndex": 6,
+      "id": "starter-short-07",
+      "streamUrl": "/api/short-video/starter-short-07"
+    },
+    {
+      "slug": "salmon-wildlife-08",
+      "title": "Young Salmon Up Close",
+      "description": "Real wildlife footage of young salmon swimming in a hatchery.",
+      "category": "NATURE",
+      "tags": [
+        "nature",
+        "animals",
+        "fish",
+        "wildlife"
+      ],
+      "duration": 20,
+      "sourceFile": "Makah coho (53333607542).webm",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Makah_coho_(53333607542).webm",
+      "sourceCreator": "USFWS - Pacific Region",
+      "license": "Public domain",
+      "audio": true,
+      "creatorIndex": 7,
+      "id": "starter-short-08",
+      "streamUrl": "/api/short-video/starter-short-08"
+    },
+    {
+      "slug": "light-rail-09",
+      "title": "Train Enters the Station",
+      "description": "Real urban transit footage with original ambient sound.",
+      "category": "TRANSPORT",
+      "tags": [
+        "train",
+        "transport",
+        "city",
+        "travel"
+      ],
+      "duration": 20,
+      "sourceFile": "Train Enters Platform Number 1 of Carlebach Light Rail Station.webm",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Train_Enters_Platform_Number_1_of_Carlebach_Light_Rail_Station.webm",
+      "sourceCreator": "Assaf Yekuel",
+      "license": "CC BY-SA 4.0",
+      "audio": true,
+      "creatorIndex": 8,
+      "id": "starter-short-09",
+      "streamUrl": "/api/short-video/starter-short-09"
+    },
+    {
+      "slug": "shenzhen-train-10",
+      "title": "High-Speed Train Through Shenzhen",
+      "description": "Real railway footage from a Guangzhou–Kowloon through train passing Shenzhen.",
+      "category": "TRAVEL",
+      "tags": [
+        "train",
+        "Shenzhen",
+        "travel",
+        "transport"
+      ],
+      "duration": 20,
+      "sourceFile": "Guangzhou-Kowloon Through Train passing Shenzhen 20080621.webm",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Guangzhou-Kowloon_Through_Train_passing_Shenzhen_20080621.webm",
+      "sourceCreator": "Alancrh",
+      "license": "CC BY-SA 4.0",
+      "audio": true,
+      "creatorIndex": 9,
+      "id": "starter-short-10",
+      "streamUrl": "/api/short-video/starter-short-10"
+    },
+    {
+      "slug": "water-nature-11",
+      "title": "Water in Motion",
+      "description": "Real water scenery recorded at a public garden exhibition.",
+      "category": "NATURE",
+      "tags": [
+        "water",
+        "nature",
+        "scenery",
+        "relaxing"
+      ],
+      "duration": 20,
+      "sourceFile": "Wasserstufen.webm",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Wasserstufen.webm",
+      "sourceCreator": "Xocolatl",
+      "license": "CC BY-SA 4.0",
+      "audio": true,
+      "creatorIndex": 10,
+      "id": "starter-short-11",
+      "streamUrl": "/api/short-video/starter-short-11"
+    },
+    {
+      "slug": "butterfly-wildlife-12",
+      "title": "Butterfly at Iguazu Falls",
+      "description": "Real wildlife footage of a numberwing butterfly near Iguazu Falls.",
+      "category": "WILDLIFE",
+      "tags": [
+        "butterfly",
+        "wildlife",
+        "nature",
+        "Iguazu"
+      ],
+      "duration": 20,
+      "sourceFile": "Catagramma pygas-thamyras.webm",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Catagramma_pygas-thamyras.webm",
+      "sourceCreator": "Peterwchen",
+      "license": "CC BY-SA 4.0",
+      "audio": true,
+      "creatorIndex": 11,
+      "id": "starter-short-12",
+      "streamUrl": "/api/short-video/starter-short-12"
+    },
+    {
+      "slug": "folk-music-13",
+      "title": "Temple Folk Music and Ceremony",
+      "description": "Real cultural ceremony footage with the recorded folk-music sound.",
+      "category": "MUSIC",
+      "tags": [
+        "culture",
+        "music",
+        "ceremony",
+        "India"
+      ],
+      "duration": 20,
+      "sourceFile": "Showing Aarti in front of deity \"Sri Sudalai Madan swamy\".webm",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Showing_Aarti_in_front_of_deity_%22Sri_Sudalai_Madan_swamy%22.webm",
+      "sourceCreator": "Sri Sudalai Madan Swamy community contributor",
+      "license": "CC BY-SA 4.0",
+      "audio": true,
+      "creatorIndex": 0,
+      "id": "starter-short-13",
+      "streamUrl": "/api/short-video/starter-short-13"
+    },
+    {
+      "slug": "spanish-railway-14",
+      "title": "Tourist Train Leaving Redondela",
+      "description": "Real railway footage from Galicia, Spain.",
+      "category": "TRAVEL",
+      "tags": [
+        "train",
+        "Spain",
+        "travel",
+        "railway"
+      ],
+      "duration": 40,
+      "sourceFile": "Tren Celta pasando por Redondela.webm",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Tren_Celta_pasando_por_Redondela.webm",
+      "sourceCreator": "Seoane Prado",
+      "license": "CC BY-SA 4.0",
+      "audio": true,
+      "creatorIndex": 1,
+      "id": "starter-short-14",
+      "streamUrl": "/api/short-video/starter-short-14"
+    },
+    {
+      "slug": "osprey-wildlife-15",
+      "title": "Osprey Chicks Calling for Food",
+      "description": "Real bird footage with natural background sound.",
+      "category": "WILDLIFE",
+      "tags": [
+        "birds",
+        "wildlife",
+        "nature",
+        "animals"
+      ],
+      "duration": 20,
+      "sourceFile": "Osprey Fledglings Begging for Food.webm",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Osprey_Fledglings_Begging_for_Food.webm",
+      "sourceCreator": "KellyC.5366",
+      "license": "CC BY 4.0",
+      "audio": true,
+      "creatorIndex": 2,
+      "id": "starter-short-15",
+      "streamUrl": "/api/short-video/starter-short-15"
+    },
+    {
+      "slug": "nigeria-water-source-16",
+      "title": "Water Source in Ogun State",
+      "description": "Real vertical footage from Ikere town, Nigeria, with location audio.",
+      "category": "NIGERIA",
+      "tags": [
+        "Nigeria",
+        "water",
+        "community",
+        "Africa"
+      ],
+      "duration": 21,
+      "sourceFile": "Stream source.webm",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Stream_source.webm",
+      "sourceCreator": "Enitanade",
+      "license": "CC BY-SA 4.0",
+      "audio": true,
+      "creatorIndex": 3,
+      "id": "starter-short-16",
+      "streamUrl": "/api/short-video/starter-short-16"
+    }
+  ]
+}

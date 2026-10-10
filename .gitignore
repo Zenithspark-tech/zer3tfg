@@ -1,0 +1,14 @@
+node_modules/
+.env
+DATA_DIR/uploads/
+DATA_DIR/games/
+DATA_DIR/resumable/
+data/
+*.log
+.DS_Store
+
+# Keep the scalable Shorts catalog state trackable; do not commit user uploads.
+!data/
+!data/shorts/
+!data/shorts/**
+!data/shorts_discovery_state.json

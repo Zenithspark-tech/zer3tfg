@@ -1,0 +1,138 @@
+const fs = require('fs');
+const path = require('path');
+const crypto = require('crypto');
+
+const SHORTS_CAPACITY = 567000;
+const CACHE_MAX_ITEMS = 3000;
+const DATA_DIR = process.env.DATA_DIR || path.join(__dirname, '..', 'data');
+const STATE_FILE = path.join(DATA_DIR, 'shorts_discovery_state.json');
+const BLOOM_FILE = path.join(DATA_DIR, 'shorts_seen.bloom');
+const BLOOM_BITS = 1 << 23; // 1 MiB bitset, sized for hundreds of thousands of URLs.
+const BLOOM_BYTES = BLOOM_BITS >> 3;
+const BLOOM_HASHES = 7;
+const DEFAULT_USER_AGENT = 'ZenithMax/19 remote Shorts discovery';
+
+const TOPIC_SEEDS = [
+  ['SPORTS',['football match','street football','basketball game','volleyball match','athletics race','cycling race','table tennis match','swimming competition']],
+  ['FOOTBALL',['football training','football skills','football stadium','youth football','women football','futsal','goalkeeper training','football fans']],
+  ['BASKETBALL',['basketball training','basketball street game','basketball dunk','basketball team','school basketball','women basketball']],
+  ['TRAVEL',['city walk','mountain travel','beach travel','market travel','road trip','village travel','tourist train','travel street']],
+  ['NATURE',['waterfall nature','river nature','forest walk','sunset nature','rainy day nature','flower garden','mountain landscape']],
+  ['WILDLIFE',['bird wildlife','butterfly wildlife','fish wildlife','elephant wildlife','monkey wildlife','lion wildlife','reptile wildlife']],
+  ['PETS',['dog playing','cat playing','pet birds','pet rabbit','pets outdoors','puppy playing']],
+  ['TECH',['robotics demonstration','3D printer','computer laboratory','electronics repair','drone technology','technology workshop']],
+  ['SCIENCE',['science experiment','physics demonstration','chemistry experiment','biology laboratory','microscope science','meteorology experiment']],
+  ['SPACE',['telescope astronomy','night sky','moon observation','planetarium','rocket launch','space science']],
+  ['EDUCATION',['classroom lesson','school science','teacher demonstration','students learning','library study','educational experiment']],
+  ['DIY',['woodworking project','craft project','electronics DIY','home repair','paper craft','maker workshop']],
+  ['COOKING',['street food cooking','home cooking','bakery kitchen','bread making','fruit preparation','traditional cooking']],
+  ['FOOD',['fresh market food','food market','restaurant kitchen','farm food','fruit market','local cuisine']],
+  ['DANCE',['street dance','traditional dance','folk dance','dance rehearsal','cultural dance','dance performance']],
+  ['MUSIC',['live music performance','folk music performance','drum performance','guitar performance','choir performance','music rehearsal']],
+  ['CULTURE',['cultural festival','traditional clothing','cultural ceremony','local festival','traditional craft','cultural parade']],
+  ['ART',['painting demonstration','sculpture art','street art','art workshop','drawing process','museum art']],
+  ['HISTORY',['historic building','historical reenactment','old town walk','heritage site','historic railway','museum history']],
+  ['CARS',['sports car','car restoration','car show','classic car','car workshop','driving road']],
+  ['MOTORCYCLES',['motorcycle ride','motorcycle show','motorcycle repair','bike road trip','motorcycle racing']],
+  ['TRAINS',['train station','passenger train','railway journey','tram ride','metro train','railway bridge']],
+  ['AVIATION',['airplane takeoff','airport runway','helicopter flight','aircraft museum','aviation show','small airplane']],
+  ['CITY',['city street','urban traffic','city park','downtown walk','night city','public square']],
+  ['ARCHITECTURE',['modern building','historic architecture','bridge architecture','city skyline','mosque architecture','church architecture']],
+  ['FARMING',['farm work','tractor farming','harvest season','vegetable farm','rice farming','fruit orchard']],
+  ['OCEAN',['ocean waves','beach ocean','coastal wildlife','fishing boat','sailing boat','underwater ocean']],
+  ['WEATHER',['rain storm','clouds timelapse','snow weather','sunset sky','thunderstorm sky','wind weather']],
+  ['COMMUNITY',['community event','volunteer activity','neighborhood event','school community','local market','public gathering']],
+  ['AFRICA',['African city','African market','African culture','African wildlife','African football','African festival']],
+  ['NIGERIA',['Nigeria street','Nigeria football','Nigeria culture','Nigeria market','Nigeria nature','Nigeria festival','Nigeria technology']],
+  ['GHANA',['Ghana street','Ghana culture','Ghana football','Ghana market','Ghana dance']],
+  ['SOUTH AFRICA',['South Africa city','South Africa wildlife','South Africa football','South Africa coast']],
+  ['FITNESS',['fitness training','running exercise','gym training','stretching exercise','sports workout']],
+  ['OUTDOORS',['hiking trail','camping outdoors','rock climbing','kayaking','cycling outdoors','nature walk']],
+  ['TRANSPORT',['bus station','city bus','ferry boat','bicycle transport','public transport','road traffic']],
+  ['ENGINEERING',['bridge construction','machine workshop','engineering laboratory','construction equipment','mechanical engineering']],
+  ['BUSINESS',['small business market','shop owner','craft business','farm business','street entrepreneur']],
+  ['PEOPLE',['family activity','friends outdoors','students activity','teamwork real life','community life']],
+];
+
+function ensureState(){
+  fs.mkdirSync(DATA_DIR,{recursive:true});
+  if(!fs.existsSync(STATE_FILE)) fs.writeFileSync(STATE_FILE, JSON.stringify({version:1,items:[],topicOffsets:{},exhausted:{},updatedAt:0},null,2));
+  if(!fs.existsSync(BLOOM_FILE)) fs.writeFileSync(BLOOM_FILE, Buffer.alloc(BLOOM_BYTES));
+}
+function loadState(){ensureState();try{return JSON.parse(fs.readFileSync(STATE_FILE,'utf8'));}catch{return {version:1,items:[],topicOffsets:{},exhausted:{},updatedAt:0};}}
+function saveState(state){state.items=state.items.slice(-CACHE_MAX_ITEMS);state.updatedAt=Date.now();fs.writeFileSync(STATE_FILE,JSON.stringify(state));}
+function loadBloom(){ensureState();let b=fs.readFileSync(BLOOM_FILE);if(b.length!==BLOOM_BYTES){b=Buffer.alloc(BLOOM_BYTES);}return b;}
+function saveBloom(b){fs.writeFileSync(BLOOM_FILE,b);}
+function hashes(value){const out=[];for(let i=0;i<BLOOM_HASHES;i++){const h=crypto.createHash('sha256').update(i+':'+value).digest();out.push(h.readUInt32BE(0)%BLOOM_BITS);}return out;}
+function bloomHas(b,value){return hashes(value).every(bit=>(b[bit>>3]&(1<<(bit&7)))!==0);}
+function bloomAdd(b,value){for(const bit of hashes(value))b[bit>>3]|=1<<(bit&7);}
+function idForUrl(url){return 'rshort-'+crypto.createHash('sha256').update(url).digest('hex').slice(0,24);}
+function b64url(value){return Buffer.from(String(value)).toString('base64url');}
+function allowedLicense(license){const s=String(license||'').replace(/<[^>]+>/g,'').toLowerCase();return ['cc0','public domain','cc by','cc by-sa'].some(x=>s.includes(x));}
+async function searchCommons(query,offset=0,limit=50){
+  const qs=new URLSearchParams({action:'query',generator:'search',gsrsearch:query,gsrnamespace:'6',gsrlimit:String(Math.min(limit,50)),gsroffset:String(offset),prop:'imageinfo',iiprop:'url|mime|extmetadata',format:'json',origin:'*'});
+  const r=await fetch('https://commons.wikimedia.org/w/api.php?'+qs.toString(),{headers:{'User-Agent':DEFAULT_USER_AGENT},signal:AbortSignal.timeout(12000)});
+  if(!r.ok) throw new Error('Commons API '+r.status);
+  const j=await r.json();
+  const items=Object.values(j.query?.pages||{}).map(page=>{
+    const ii=page.imageinfo?.[0]||{},md=ii.extmetadata||{};
+    return {url:ii.url||'',mime:ii.mime||'',title:String(page.title||'').replace(/^File:/,''),license:md.LicenseShortName?.value||md.License?.value||'',sourcePage:'https://commons.wikimedia.org/wiki/'+encodeURIComponent(String(page.title||'')),sourceCreator:md.Artist?.value||md.Credit?.value||''};
+  }).filter(x=>/^video\/(mp4|webm|ogg)$/i.test(x.mime)&&x.url&&allowedLicense(x.license));
+  return {items,nextOffset:j.continue?.gsroffset ?? null};
+}
+
+function topicEntries(category){
+  const wanted=String(category||'').toUpperCase();
+  const source=wanted&&wanted!=='ALL'?TOPIC_SEEDS.filter(([c])=>c===wanted):TOPIC_SEEDS;
+  return source.flatMap(([cat,topics])=>topics.map(topic=>({category:cat,topic}))); 
+}
+function makeItem(raw,category,topic,index){
+  const id=idForUrl(raw.url);
+  return {id,category:rawCategory(category,raw,topic),title:raw.title.replace(/\.[^.]+$/,'').slice(0,120)||topic,description:`Real-world ${topic} footage from Wikimedia Commons.`,tags:[category,topic].join(' ').split(/\s+/).filter(Boolean).slice(0,8),duration:0,sourceFile:raw.title,sourcePage:raw.sourcePage,sourceCreator:raw.sourceCreator,license:raw.license,audio:true,mediaSource:'Wikimedia Commons',remoteUrl:raw.url,remoteKey:b64url(raw.url),creatorIndex:index%12,createdAt:new Date().toISOString()};
+}
+function rawCategory(category,raw,topic){return category&&category!=='ALL'?category:String(raw.title+' '+topic).toUpperCase().split(/[^A-Z0-9]+/).filter(Boolean)[0]||'GENERAL';}
+
+async function discover({needed=12,category='ALL'}={}){
+  const state=loadState();const bloom=loadBloom();const current=state.items.filter(x=>!category||category==='ALL'||x.category===category);
+  if(current.length>=needed)return current.slice(0,needed);
+  const topics=topicEntries(category);let guard=0;
+  while(state.items.filter(x=>!category||category==='ALL'||x.category===category).length<needed && guard<topics.length*3){
+    const batch=topics.slice((guard%Math.max(1,topics.length)),(guard%Math.max(1,topics.length))+5); if(!batch.length)break;
+    const results=await Promise.all(batch.map(async t=>{
+      const key=t.category+'|'+t.topic; if(state.exhausted[key])return [t,null];
+      const offset=Number(state.topicOffsets[key]||0);
+      try{return [t,await searchCommons(t.topic+' video',offset,50)]}catch(err){return [t,{error:err.message,items:[],nextOffset:null}]}
+    }));
+    for(const [t,result] of results){
+      if(!result)continue;
+      const key=t.category+'|'+t.topic;
+      if(result.nextOffset===null)state.exhausted[key]=true; else state.topicOffsets[key]=result.nextOffset||0;
+      for(const raw of result.items){
+        if(state.items.some(x=>x.remoteUrl===raw.url))continue;
+        if(bloomHas(bloom,raw.url))continue;
+        bloomAdd(bloom,raw.url);
+        state.items.push(makeItem(raw,t.category,t.topic,state.items.length));
+        if(state.items.filter(x=>!category||category==='ALL'||x.category===category).length>=needed)break;
+      }
+    }
+    guard+=5;
+    if(guard>topics.length*3)break;
+  }
+  saveState(state);saveBloom(bloom);
+  return state.items.filter(x=>!category||category==='ALL'||x.category===category).slice(0,needed);
+}
+
+async function getPage({page=1,limit=12,category='ALL'}={}){
+  const state=loadState();
+  const seed=state.items.filter(x=>!category||category==='ALL'||x.category===category);
+  const needed=Math.min(SHORTS_CAPACITY,page*limit);
+  if(seed.length<needed){try{await discover({needed,category});}catch{} }
+  const final=loadState().items.filter(x=>!category||category==='ALL'||x.category===category);
+  const start=(page-1)*limit;
+  return {items:final.slice(start,start+limit),hasMore:page*limit<SHORTS_CAPACITY && (final.length>start+limit || final.length<SHORTS_CAPACITY),available:final.length,capacity:SHORTS_CAPACITY};
+}
+
+function decodeRemoteKey(key){try{return Buffer.from(String(key),'base64url').toString('utf8');}catch{return '';}}
+function isAllowedRemoteUrl(url){try{const u=new URL(url);return u.protocol==='https:' && (u.hostname==='commons.wikimedia.org'||u.hostname.endsWith('.wikimedia.org'));}catch{return false;}}
+
+module.exports={SHORTS_CAPACITY,TOPIC_SEEDS,discover,getPage,decodeRemoteKey,isAllowedRemoteUrl,b64url,idForUrl};

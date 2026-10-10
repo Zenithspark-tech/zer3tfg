@@ -1,0 +1,22 @@
+{
+  "name": "zenithmax-v31-cool-app-icon",
+  "version": "31.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node --watch server/server.js",
+    "check": "node --check server/server.js && node --check server/entertainment.js && node --check client/js/app.js && node --check server/shorts_remote.js && node --check server/production_services.js",
+    "test:entertainment": "node scripts/test-entertainment.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "bcryptjs": "^3.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.2",
+    "adm-zip": "^0.5.16",
+    "pg": "^8.16.3"
+  }
+}
