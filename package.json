@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server/server.js",
     "dev": "node --watch server/server.js",
-    "check": "node --check server/server.js && node --check server/entertainment.js && node --check client/js/app.js && node --check server/shorts_remote.js && node --check server/production_services.js",
+    "check": "node --check server/server.js && node --check server/entertainment.js && node --check client/js/app.js && node --check server/shorts_remote.js && node --check server/production_services.js && node --check src/server/server.js",
     "test:entertainment": "node scripts/test-entertainment.js"
   },
   "engines": {

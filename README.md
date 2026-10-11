@@ -46,3 +46,10 @@ npm start
 - Existing account, upload, database, and entertainment functionality remains unchanged by this icon-only update.
 
 After deploying, installed PWAs may need to be reopened or reinstalled to refresh their launcher icon; browser favicon caches can also take time to update.
+
+## Render startup-path compatibility fix
+
+The canonical entry point is `server/server.js` and the recommended Render Start Command is `npm start`.
+If a Render service still runs `node src/server/server.js`, this release includes a compatibility entry point at `src/server/server.js` that forwards to the canonical server. This avoids maintaining two server implementations.
+
+In Render, keep **Root Directory** empty when `package.json`, `server/`, and `client/` are at the repository root. Set **Build Command** to `npm install` and **Start Command** to `npm start`. Save, then redeploy the latest commit. Do not change `DATABASE_URL` to fix a module-not-found startup error.
