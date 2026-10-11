@@ -1,0 +1,271 @@
+{
+  "creators": [
+    {
+      "id": "starter-creator-1",
+      "name": "ZenithMax Creator 1",
+      "bio": "Starter creator for the ZenithMax remote video library."
+    },
+    {
+      "id": "starter-creator-2",
+      "name": "ZenithMax Creator 2",
+      "bio": "Starter creator for the ZenithMax remote video library."
+    },
+    {
+      "id": "starter-creator-3",
+      "name": "ZenithMax Creator 3",
+      "bio": "Starter creator for the ZenithMax remote video library."
+    },
+    {
+      "id": "starter-creator-4",
+      "name": "ZenithMax Creator 4",
+      "bio": "Starter creator for the ZenithMax remote video library."
+    },
+    {
+      "id": "starter-creator-5",
+      "name": "ZenithMax Creator 5",
+      "bio": "Starter creator for the ZenithMax remote video library."
+    },
+    {
+      "id": "starter-creator-6",
+      "name": "ZenithMax Creator 6",
+      "bio": "Starter creator for the ZenithMax remote video library."
+    },
+    {
+      "id": "starter-creator-7",
+      "name": "ZenithMax Creator 7",
+      "bio": "Starter creator for the ZenithMax remote video library."
+    },
+    {
+      "id": "starter-creator-8",
+      "name": "ZenithMax Creator 8",
+      "bio": "Starter creator for the ZenithMax remote video library."
+    },
+    {
+      "id": "starter-creator-9",
+      "name": "ZenithMax Creator 9",
+      "bio": "Starter creator for the ZenithMax remote video library."
+    },
+    {
+      "id": "starter-creator-10",
+      "name": "ZenithMax Creator 10",
+      "bio": "Starter creator for the ZenithMax remote video library."
+    },
+    {
+      "id": "starter-creator-11",
+      "name": "ZenithMax Creator 11",
+      "bio": "Starter creator for the ZenithMax remote video library."
+    },
+    {
+      "id": "starter-creator-12",
+      "name": "ZenithMax Creator 12",
+      "bio": "Starter creator for the ZenithMax remote video library."
+    }
+  ],
+  "videos": [
+    {
+      "slug": "nasa-earth-2025",
+      "title": "Seeing Earth as Only NASA Can",
+      "description": "NASA views of Earth from space and missions.",
+      "category": "SCIENCE",
+      "tags": [
+        "NASA",
+        "Earth",
+        "Space"
+      ],
+      "creatorIndex": 0,
+      "external": true,
+      "source": "YouTube",
+      "sourceUrl": "https://www.youtube.com/watch?v=iTHUUjTA-LI",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/iTHUUjTA-LI",
+      "thumbnail": "https://i.ytimg.com/vi/iTHUUjTA-LI/hqdefault.jpg",
+      "provider": "NASA",
+      "duration": 240,
+      "durationLabel": "Featured video"
+    },
+    {
+      "slug": "nasa-earth-home",
+      "title": "NASA Sees Earth, Our Unique Home",
+      "description": "A NASA look at Earth from space.",
+      "category": "SCIENCE",
+      "tags": [
+        "NASA",
+        "Earth",
+        "Space"
+      ],
+      "creatorIndex": 1,
+      "external": true,
+      "source": "YouTube",
+      "sourceUrl": "https://www.youtube.com/watch?v=ps3kWOQRQnY",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/ps3kWOQRQnY",
+      "thumbnail": "https://i.ytimg.com/vi/ps3kWOQRQnY/hqdefault.jpg",
+      "provider": "NASA",
+      "duration": 240,
+      "durationLabel": "Featured video"
+    },
+    {
+      "slug": "fifa-skills-2022",
+      "title": "FIFA World Cup Skills Showcase",
+      "description": "Football skills showcase from FIFA.",
+      "category": "SPORTS",
+      "tags": [
+        "FIFA",
+        "Football",
+        "Skills"
+      ],
+      "creatorIndex": 2,
+      "external": true,
+      "source": "YouTube",
+      "sourceUrl": "https://www.youtube.com/watch?v=OzO8xwWc5Zg",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/OzO8xwWc5Zg",
+      "thumbnail": "https://i.ytimg.com/vi/OzO8xwWc5Zg/hqdefault.jpg",
+      "provider": "FIFA",
+      "duration": 240,
+      "durationLabel": "Featured video"
+    },
+    {
+      "slug": "fifa-skills-2018",
+      "title": "FIFA World Cup 2018 Skills",
+      "description": "Memorable football skills from FIFA.",
+      "category": "SPORTS",
+      "tags": [
+        "FIFA",
+        "Football",
+        "Skills"
+      ],
+      "creatorIndex": 3,
+      "external": true,
+      "source": "YouTube",
+      "sourceUrl": "https://www.youtube.com/watch?v=s5AcUJ2cmZ4",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/s5AcUJ2cmZ4",
+      "thumbnail": "https://i.ytimg.com/vi/s5AcUJ2cmZ4/hqdefault.jpg",
+      "provider": "FIFA",
+      "duration": 240,
+      "durationLabel": "Featured video"
+    },
+    {
+      "slug": "bbc-island-wildlife",
+      "title": "Earth's Spectacular Island Wildlife",
+      "description": "Wildlife stories from BBC Earth.",
+      "category": "WILDLIFE",
+      "tags": [
+        "BBC Earth",
+        "Animals",
+        "Nature"
+      ],
+      "creatorIndex": 4,
+      "external": true,
+      "source": "YouTube",
+      "sourceUrl": "https://www.youtube.com/watch?v=29qW_dWBbCk",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/29qW_dWBbCk",
+      "thumbnail": "https://i.ytimg.com/vi/29qW_dWBbCk/hqdefault.jpg",
+      "provider": "BBC Earth",
+      "duration": 240,
+      "durationLabel": "Featured video"
+    },
+    {
+      "slug": "bbc-africa-wildlife",
+      "title": "The Amazing Wildlife of Africa in Stunning 4K",
+      "description": "Wildlife from Africa presented by BBC Earth.",
+      "category": "WILDLIFE",
+      "tags": [
+        "BBC Earth",
+        "Africa",
+        "Animals"
+      ],
+      "creatorIndex": 5,
+      "external": true,
+      "source": "YouTube",
+      "sourceUrl": "https://www.youtube.com/watch?v=-aklu9_skFc",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/-aklu9_skFc",
+      "thumbnail": "https://i.ytimg.com/vi/-aklu9_skFc/hqdefault.jpg",
+      "provider": "BBC Earth",
+      "duration": 240,
+      "durationLabel": "Featured video"
+    },
+    {
+      "slug": "long-long-youtube-go-full-course",
+      "title": "Go Programming - Full Course",
+      "description": "A complete Go programming course covering the language from fundamentals through concurrency and goroutines.",
+      "category": "LEARNING",
+      "tags": [
+        "Go",
+        "Programming",
+        "Coding",
+        "Course"
+      ],
+      "creatorIndex": 6,
+      "external": true,
+      "source": "YouTube",
+      "sourceUrl": "https://www.youtube.com/watch?v=V-lI7AmusGs",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/V-lI7AmusGs",
+      "thumbnail": "https://i.ytimg.com/vi/V-lI7AmusGs/hqdefault.jpg",
+      "provider": "Tech With Tim",
+      "duration": 16919,
+      "durationLabel": "4h 41m 59s"
+    },
+    {
+      "slug": "long-long-youtube-cpp-course",
+      "title": "C++ Full Course (Four Hour All-in-One Tutorial)",
+      "description": "A long-form C++ beginner course covering input/output, control flow, functions, arrays, vectors, templates, files, classes and practical exercises.",
+      "category": "LEARNING",
+      "tags": [
+        "C++",
+        "Programming",
+        "Coding",
+        "Course"
+      ],
+      "creatorIndex": 7,
+      "external": true,
+      "source": "YouTube",
+      "sourceUrl": "https://www.youtube.com/watch?v=9Myk2vcK8s8",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/9Myk2vcK8s8",
+      "thumbnail": "https://i.ytimg.com/vi/9Myk2vcK8s8/hqdefault.jpg",
+      "provider": "Caleb Curry",
+      "duration": 13607,
+      "durationLabel": "3h 46m 47s"
+    },
+    {
+      "slug": "long-long-youtube-python-course",
+      "title": "Python Full Course for Beginners",
+      "description": "A beginner Python course covering installation, variables, strings, numbers, operators, loops and functions.",
+      "category": "LEARNING",
+      "tags": [
+        "Python",
+        "Programming",
+        "Coding",
+        "Course"
+      ],
+      "creatorIndex": 8,
+      "external": true,
+      "source": "YouTube",
+      "sourceUrl": "https://www.youtube.com/watch?v=K5KVEU3aaeQ",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/K5KVEU3aaeQ",
+      "thumbnail": "https://i.ytimg.com/vi/K5KVEU3aaeQ/hqdefault.jpg",
+      "provider": "Programming with Mosh",
+      "duration": 7340,
+      "durationLabel": "2h 02m 20s"
+    },
+    {
+      "slug": "long-long-youtube-music-hour",
+      "title": "1 Hour of Music Mix",
+      "description": "A one-hour music mix presented as an external YouTube video.",
+      "category": "MUSIC",
+      "tags": [
+        "Music",
+        "Mix",
+        "Listening"
+      ],
+      "creatorIndex": 9,
+      "external": true,
+      "source": "YouTube",
+      "sourceUrl": "https://www.youtube.com/watch?v=9RnbkBv_xsA",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/9RnbkBv_xsA",
+      "thumbnail": "https://i.ytimg.com/vi/9RnbkBv_xsA/hqdefault.jpg",
+      "provider": "MarioMex International Mixes",
+      "duration": 3600,
+      "durationLabel": "1h 00m"
+    }
+  ],
+  "remote_video_library": [],
+  "mediaNote": "Verified embedded-video catalog. Feed uses official YouTube embeds for reliable playback; no background remote-media lookup is required for the first page."
+}

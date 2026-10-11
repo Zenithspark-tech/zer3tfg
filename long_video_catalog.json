@@ -1,0 +1,228 @@
+[
+  {
+    "id": "long-youtube-go-full-course",
+    "title": "Go Programming - Full Course",
+    "description": "A complete Go programming course covering the language from fundamentals through concurrency and goroutines.",
+    "category": "LEARNING",
+    "tags": [
+      "Go",
+      "Programming",
+      "Coding",
+      "Course"
+    ],
+    "duration": 16919,
+    "durationLabel": "4h 41m 59s",
+    "provider": "Tech With Tim",
+    "source": "YouTube",
+    "sourceUrl": "https://www.youtube.com/watch?v=V-lI7AmusGs",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/V-lI7AmusGs",
+    "thumbnail": "https://i.ytimg.com/vi/V-lI7AmusGs/hqdefault.jpg"
+  },
+  {
+    "id": "long-youtube-cpp-course",
+    "title": "C++ Full Course (Four Hour All-in-One Tutorial)",
+    "description": "A long-form C++ beginner course covering input/output, control flow, functions, arrays, vectors, templates, files, classes and practical exercises.",
+    "category": "LEARNING",
+    "tags": [
+      "C++",
+      "Programming",
+      "Coding",
+      "Course"
+    ],
+    "duration": 13607,
+    "durationLabel": "3h 46m 47s",
+    "provider": "Caleb Curry",
+    "source": "YouTube",
+    "sourceUrl": "https://www.youtube.com/watch?v=9Myk2vcK8s8",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/9Myk2vcK8s8",
+    "thumbnail": "https://i.ytimg.com/vi/9Myk2vcK8s8/hqdefault.jpg"
+  },
+  {
+    "id": "long-youtube-python-course",
+    "title": "Python Full Course for Beginners",
+    "description": "A beginner Python course covering installation, variables, strings, numbers, operators, loops and functions.",
+    "category": "LEARNING",
+    "tags": [
+      "Python",
+      "Programming",
+      "Coding",
+      "Course"
+    ],
+    "duration": 7340,
+    "durationLabel": "2h 02m 20s",
+    "provider": "Programming with Mosh",
+    "source": "YouTube",
+    "sourceUrl": "https://www.youtube.com/watch?v=K5KVEU3aaeQ",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/K5KVEU3aaeQ",
+    "thumbnail": "https://i.ytimg.com/vi/K5KVEU3aaeQ/hqdefault.jpg"
+  },
+  {
+    "id": "long-youtube-music-hour",
+    "title": "1 Hour of Music Mix",
+    "description": "A one-hour music mix presented as an external YouTube video.",
+    "category": "MUSIC",
+    "tags": [
+      "Music",
+      "Mix",
+      "Listening"
+    ],
+    "duration": 3600,
+    "durationLabel": "1h 00m",
+    "provider": "MarioMex International Mixes",
+    "source": "YouTube",
+    "sourceUrl": "https://www.youtube.com/watch?v=9RnbkBv_xsA",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/9RnbkBv_xsA",
+    "thumbnail": "https://i.ytimg.com/vi/9RnbkBv_xsA/hqdefault.jpg"
+  },
+  {
+    "id": "long-commons-football-nigeria",
+    "title": "World Football Day Campaign in Nigeria 2026",
+    "description": "A CC0 video from Wikimedia Commons featuring the World Football Day campaign in Nigeria.",
+    "category": "SPORTS",
+    "tags": [
+      "Football",
+      "Nigeria",
+      "Community",
+      "Sports"
+    ],
+    "duration": 72,
+    "durationLabel": "1m 12s",
+    "provider": "Uncle Bash007",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:VIDEO-2026-05-21-22-53-29.webm",
+    "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/VIDEO-2026-05-21-22-53-29.webm",
+    "license": "CC0 1.0"
+  },
+  {
+    "id": "long-commons-final1",
+    "title": "Ultraviolet",
+    "description": "A short creative video released under CC BY-SA 4.0 on Wikimedia Commons.",
+    "category": "ART",
+    "tags": [
+      "Art",
+      "Ultraviolet",
+      "Creative"
+    ],
+    "duration": 61,
+    "durationLabel": "1m 01s",
+    "provider": "Lohmeyer5077",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Final1.webm",
+    "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Final1.webm",
+    "license": "CC BY-SA 4.0"
+  },
+  {
+    "id": "long-commons-wikimedia-office-hours",
+    "title": "Wikimedia Foundation Interim Executive Director — Office Hours",
+    "description": "A long-form Wikimedia Foundation office-hours video hosted on Wikimedia Commons.",
+    "category": "COMMUNITY",
+    "tags": [
+      "Wikimedia",
+      "Community",
+      "Technology",
+      "Talk"
+    ],
+    "duration": 3637,
+    "durationLabel": "1h 00m 37s",
+    "provider": "Wikimedia Foundation",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wikimedia_Foundation_Interim_Executive_Director_May_2016_Video_Office_Hours.webm",
+    "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Wikimedia_Foundation_Interim_Executive_Director_May_2016_Video_Office_Hours.webm",
+    "license": "CC BY-SA 4.0"
+  },
+  {
+    "id": "long-commons-neuromat",
+    "title": "Brain Signatures of a Multiscale Process of Sequence Learning in Humans",
+    "description": "A long-form scientific talk from Wikimedia Commons released under CC BY-SA 4.0.",
+    "category": "SCIENCE",
+    "tags": [
+      "Science",
+      "Neuroscience",
+      "Learning",
+      "Research"
+    ],
+    "duration": 8873,
+    "durationLabel": "2h 27m 53s",
+    "provider": "NEUROMAT",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:NEUROMAT_MEETING_-_Brain_signatures_of_a_multiscale_process_of_sequence_learning_in_humans-qJOm0nnpoio.webm",
+    "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/NEUROMAT_MEETING_-_Brain_signatures_of_a_multiscale_process_of_sequence_learning_in_humans-qJOm0nnpoio.webm",
+    "license": "CC BY-SA 4.0"
+  },
+  {
+    "id": "long-commons-edidaton",
+    "title": "Edidatón Bicentenario",
+    "description": "A long-form Wikimedia Commons event recording released under CC BY-SA 4.0.",
+    "category": "COMMUNITY",
+    "tags": [
+      "Community",
+      "Event",
+      "Education",
+      "Wikimedia"
+    ],
+    "duration": 9520,
+    "durationLabel": "2h 38m 40s",
+    "provider": "Dgastelu",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Edidat%C3%B3n_Bicentenario_-_Carla_Lopez_y_Omar_Vega.webm",
+    "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Edidat%C3%B3n_Bicentenario_-_Carla_Lopez_y_Omar_Vega.webm",
+    "license": "CC BY-SA 4.0"
+  },
+  {
+    "id": "long-commons-ifremer-shrimp",
+    "title": "Observation of Rimicaris exoculata Shrimp",
+    "description": "Scientific observation footage from Ifremer, available on Wikimedia Commons under CC BY 4.0.",
+    "category": "SCIENCE",
+    "tags": [
+      "Ocean",
+      "Science",
+      "Marine Life",
+      "Research"
+    ],
+    "duration": 1800,
+    "durationLabel": "30m 00s",
+    "provider": "Ifremer",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Observation_de_crevettes_Rimicaris_exoculata_(Ifremer_00699-81103).webm",
+    "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/5/55/Observation_de_crevettes_Rimicaris_exoculata_%28Ifremer_00699-81103%29.webm",
+    "license": "CC BY 4.0"
+  },
+  {
+    "id": "long-commons-bracken",
+    "title": "Government Digital Service — Wikimania Talk",
+    "description": "A 30-minute technology and public-service talk from Wikimania 2014, hosted by Wikimedia Commons under a Creative Commons license.",
+    "category": "TECHNOLOGY",
+    "tags": [
+      "Technology",
+      "Government",
+      "Digital Service",
+      "Talk"
+    ],
+    "duration": 1817,
+    "durationLabel": "30m 17s",
+    "provider": "Wikimania 2014",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mike_Bracken_-_Government_Digital_Service_-_Wikimania_2014.webm",
+    "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Mike_Bracken_-_Government_Digital_Service_-_Wikimania_2014.webm",
+    "license": "CC BY 4.0"
+  },
+  {
+    "id": "long-commons-wikimedia-research",
+    "title": "State of Wikimedia Research 2025–2026 — Research Findings",
+    "description": "A current Wikimedia research presentation published in 2026 and hosted on Wikimedia Commons.",
+    "category": "SCIENCE",
+    "tags": [
+      "Wikimedia",
+      "Research",
+      "Technology",
+      "2026"
+    ],
+    "duration": 1839,
+    "durationLabel": "30m 39s",
+    "provider": "Wikimania 2026",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wikimania_2026_%E2%80%93_State_of_Wikimedia_Research_2025-2026_%2B_5_Research_Findings_and_how_you_can_use_them_in_your_work._Part_2_%C3%89quit%C3%A9.webm",
+    "mediaUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Wikimania_2026_%E2%80%93_State_of_Wikimedia_Research_2025-2026_%2B_5_Research_Findings_and_how_you_can_use_them_in_your_work._Part_2_%C3%89quit%C3%A9.webm",
+    "license": "CC BY-SA 4.0"
+  }
+]
