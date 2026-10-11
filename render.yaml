@@ -60,6 +60,13 @@ services:
 
       - key: RELEASE_CHANNEL
         value: stable
+      # Creator payments are not live. Keep this false so the demo ledger cannot show fake earnings.
+      - key: ENABLE_DEMO_MONETIZATION
+        value: "false"
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: PGSSL_REJECT_UNAUTHORIZED
+        value: "false"
       # Optional: enable dynamic YouTube discovery without rehosting YouTube media.
       - key: YOUTUBE_API_KEY
         sync: false
